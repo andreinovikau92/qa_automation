@@ -15,8 +15,10 @@ test.describe('homePage.spec', () => {
     await expect(homePage.pageHeader).toBeVisible();
   });
 
-  // test('Verify the Log in is located on the main page', async ({ page }) => {
-  //   await
-  // });
+  test('Verify the Log in is located on the main page', async ({ page }) => {
+    const homePage = new HomePage(page);
+
+    await expect(homePage.logInButton).toBeVisible();
+  });
 
 });
