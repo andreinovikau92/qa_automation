@@ -15,10 +15,15 @@ test.describe('homePage.spec', () => {
     await expect(homePage.pageHeader).toBeVisible();
   });
 
-  test('Verify the Log in is located on the main page', async ({ page }) => {
+  test('Verify the Log in button is located on the main page', async ({ page }) => {
     const homePage = new HomePage(page);
 
     await expect(homePage.logInButton).toBeVisible();
   });
+  
+  test('Verify the Usernamae field is located on the main page', async ({ page}) => {
+    const homePage = new HomePage(page);
 
+    await expect(homePage.userNameField).toBeVisible();
+  });
 });
