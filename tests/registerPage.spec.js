@@ -15,6 +15,7 @@ test.describe('registerPage.spec', () => {
         const registerPage = new RegisterPage(page);
 
         await expect(registerPage.firstNameField).toBeVisible();
+        await expect(registerPage.lastNameField).toBeVisible();
     });
 });
 
