@@ -11,11 +11,21 @@ test.describe('registerPage.spec', () => {
         await homePage.clickRegisterLink();
     });
 
-    test('Smoke test', async ({ page }) => {
+    test('Smoke test of the Register page', async ({ page }) => {
         const registerPage = new RegisterPage(page);
 
         await expect(registerPage.firstNameField).toBeVisible();
         await expect(registerPage.lastNameField).toBeVisible();
+        await expect(registerPage.adressField).toBeVisible();
+        await expect(registerPage.cityField).toBeVisible();
+        await expect(registerPage.stateField).toBeVisible();
+        await expect(registerPage.zipField).toBeVisible();
+        await expect(registerPage.phoneField).toBeVisible();
+        await expect(registerPage.ssnField).toBeVisible();
+        await expect(registerPage.usernameField).toBeVisible();
+        await expect(registerPage.passwordField).toBeVisible();
+        await expect(registerPage.confirmPasswordField).toBeVisible();
+        await expect(registerPage.registerBtn).toBeVisible();
     });
 });
 
