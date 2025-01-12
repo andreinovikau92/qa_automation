@@ -5,6 +5,8 @@ class HomePage {
         this.logInButton = page.locator('div.login input.button');
         this.userNameField = page.locator('div.login .input[name="username"]');
         this.getRegisterLink = page.locator('a[href="register.htm"]');
+        this.getLogInBtn = page.locator('div input.button');
+        this.getErrorMsg = page.locator('p.error');
     }
 
     async open() {
@@ -13,6 +15,10 @@ class HomePage {
 
     async clickRegisterLink() {
         await this.getRegisterLink.click();
+    }
+
+    async clickLogInBtb() {
+        await this.getLogInBtn.click();
     }
 }
 

@@ -27,6 +27,15 @@ test.describe('registerPage.spec', () => {
         await expect(registerPage.confirmPasswordField).toBeVisible();
         await expect(registerPage.registerBtn).toBeVisible();
     });
+
+    test('Verify when the fields are empty and after clicking the Register button the user is not created', async ({ page}) => {
+        const registerPage = new RegisterPage(page);
+        
+        await registerPage.clickRegisterBtn();
+
+        await expect(registerPage.errorMsg).toHaveText('First name is required.');
+
+    });
 });
 
 

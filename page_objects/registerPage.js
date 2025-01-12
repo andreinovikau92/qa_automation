@@ -13,7 +13,12 @@ class RegisterPage {
         this.usernameField = page.locator('input[name="customer.username"]');
         this.passwordField = page.locator('input[name="customer.password"]');
         this.confirmPasswordField = page.locator('input[name="repeatedPassword"]');
-        this.registerBtn = page.locator('.login input.button');
+        this.registerBtn = page.locator('td input.button');
+        this.errorMsg = page.locator('[id="customer.firstName.errors"]');
+    }
+
+    async clickRegisterBtn() {
+        await this.registerBtn.click();
     }
 }
 
