@@ -1,3 +1,5 @@
+import { name } from "../playwright.config";
+
 class HomePage {
     constructor(page) {
         this.page = page;
@@ -7,6 +9,7 @@ class HomePage {
         this.getRegisterLink = page.locator('a[href="register.htm"]');
         this.getLogInBtn = page.locator('div input.button');
         this.getErrorMsg = page.locator('p.error');
+        this.getAboutUsLink = page.getByRole('link', {name: 'About Us'}).first();
     }
 
     async open() {
