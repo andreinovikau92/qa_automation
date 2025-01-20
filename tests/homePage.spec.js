@@ -45,4 +45,11 @@ test.describe('homePage.spec', () => {
 
     await expect(homePage.getErrorMsg).toHaveText(ERROR_MSG_WHEN_USRER_CLICKS_LOGIN_BTN_WITHOUT_ENTERING_ANY_DATA_TO_LOGIN_FIELDS);
   });
+
+  test('Verify the About Us link is visible', async ({ page }) => {
+
+    const homePage = new HomePage(page);
+
+    await expect(homePage.getAboutUsLink).toBeVisible();
+  });
 });
